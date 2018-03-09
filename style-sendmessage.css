@@ -1,0 +1,13 @@
+body{
+  background-color: red;
+}
+
+section{
+  padding: 25px;
+border-radius: 0 0 25px 25px;
+/* background-color: green; */
+background-color: #66ffff;
+}
+.section--message-input{
+  width:75%;
+}

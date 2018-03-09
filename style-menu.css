@@ -1,0 +1,40 @@
+.nav--menu{
+  /* background-color: lightgrey; */
+  /* background-color: #3399ff; */
+  background-color: #66ffff;
+  /* background-color: aqua; */
+  /* height: 250px; */
+  padding: 10px;
+  /* margin-bottom: 10px; */
+
+  /* border-style:ridge; */
+  border-radius: 20px 20px 0 0;
+}
+.nav--menu ul{
+  list-style-type: none;
+}
+.nav--menu ul li{
+  display: inline;
+  padding : 0 0.5em;
+}
+/* .nav--menu  a{
+  background-color: grey;
+  text-decoration: none;
+} */
+.section--login{
+  display: inline;
+
+  padding: 10px;
+  /* padding:0.05em; */
+  /* float: right; */
+  background-color: blue;
+}
+.a--register{
+  /* display: block; */
+  /* display: inline; */
+  /* float: right; */
+  margin-left: 20px;
+
+  font-size: 0.9em;
+  font-style: italic;
+}

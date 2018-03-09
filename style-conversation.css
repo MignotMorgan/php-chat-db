@@ -1,0 +1,60 @@
+body{
+  /* background-color: #3399ff; */
+  background-color: white;
+}
+
+.div--messages{
+  width:60%;
+  margin-bottom: 5px;
+  padding: 10px;
+  /* background-color:#E6E6FA; */
+  /* background-color: aqua; */
+}
+.lbl--messages-pseudo{
+  font-weight: bold;
+}
+.lbl--messages-datetime{
+  display: block;
+  margin: 10px;
+
+  font-size: 0.7em;
+  font-style: italic;
+}
+.lbl--messages-message{
+  display:block;
+  padding: 10px;
+  /* background-color: green; */
+}
+
+.div--messages-left{
+  float:left;
+  text-align: left;
+  border-radius: 0 15px 15px 0;
+
+  background: linear-gradient(to right, white, aqua);
+}
+.div--messages-right{
+  float:right;
+  text-align: right;
+  border-radius: 15px 0 0 15px;
+
+  background: linear-gradient(to right, aqua, white);
+}
+.pseudo-left{
+  /* margin-right: 20%; */
+}
+.pseudo-right{
+  /* margin-left: 20%; */
+}
+.datetime-left{
+
+}
+.datetime-right{
+
+}
+.txt--left{
+  text-align: right;
+}
+.txt--right{
+  text-align: left;
+}

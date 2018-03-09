@@ -11,5 +11,5 @@ function ConnectMySQL()
     die('Erreur : ' . $e->getMessage());
   }
   return $bdd;
-}
+};
  ?>
