@@ -17,17 +17,10 @@
       </header>
       <main>
         <section class="section--messages">
-          <header>
-
-          </header>
-          <main>
-            <div class="section--message-iframe">
-              <iframe  src="conversation.php" width="100%" height="100%" scrolling="true" frameborder="0" seamless></iframe>
-            </div>
-          </main>
+          <iframe  src="conversation.php" width="100%" height="100%" scrolling="true" seamless></iframe>
         </section>
-        <section class="section--send-message">
-          <iframe src="sendmessage.php" width="100%" height="100%" frameborder="0"></iframe>
+        <section class="section--send">
+          <iframe src="sendmessage.php" width="100%" height="100%" scrolling="no"></iframe>
         </section>
       </main>
       <footer>
