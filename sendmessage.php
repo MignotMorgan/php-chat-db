@@ -39,7 +39,7 @@ if( $_SERVER['REQUEST_METHOD']=='POST')
    <head>
      <meta charset="utf-8">
      <title>Envoi de messages</title>
-     <link rel="stylesheet" href="style-sendmessage.css">
+     <link rel="stylesheet" href="css/sendmessage.css">
    </head>
    <body>
      <section>

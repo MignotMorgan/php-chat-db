@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <title>Chat</title>
-    <link rel="stylesheet" href="style-index.css">
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
     <section class=" box--message">

@@ -4,56 +4,55 @@ require("ConnectMySQL.php");
 
   if( $_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['btn-register']))
   {
-    // $_POST['r_pseudo'] = filter_var($_POST["r_pseudo"], FILTER_SANITIZE_STRING);
-    // $_POST['r_email'] = filter_var($_POST["r_email"], FILTER_SANITIZE_EMAIL);
-    // $_POST['r_password'] = filter_var($_POST["r_password"], FILTER_SANITIZE_STRING);
-    // $_POST['r_confirmpassword'] = filter_var($_POST["r_confirmpassword"], FILTER_SANITIZE_STRING);
-    // $_POST['btn-register'] = filter_var($_POST["btn-register"], FILTER_SANITIZE_STRING);
-    //
-    // $valid = true;
-    // if(empty($_POST['r_pseudo']))$valid = false;
-    // if(empty($_POST['r_email']))$valid = false;
-    // if(empty($_POST['r_password']))$valid = false;
-    // if(empty($_POST['r_confirmpassword']))$valid = false;
-    // if(empty($_POST['btn-register']))$valid = false;
-    //
-    // if($_POST['r_password'] != $_POST['r_confirmpassword'])$valid = false;
-    //
-    // if($valid)
-    // {
-    //   $bdd = ConnectMySQL();
-    //
-    //   $req = $bdd->prepare('SELECT count(*)
-    //                         FROM users
-    //                         WHERE pseudo = :pseudo
-    //                         || email = :email
-    //                       ');
-    //   $req->execute(array(
-    //           'pseudo'  => $_POST['r_pseudo'],
-    //           'email'   => $_POST['r_email']
-    //         ));
-    //
-    //   $number = $req->fetchColumn();
-    //
-    //   if($number == 0)
-    //   {
-    //     $req = $bdd->prepare('INSERT INTO users(pseudo, email, password) VALUES(:pseudo, :email, :password)');
-    //     $succeed = $req->execute(array(
-    //         'pseudo'    => $_POST['r_pseudo'],
-    //         'email'     => $_POST['r_email'],
-    //         'password'  => sha1($_POST['r_password'])
-    //         ));
-    //     if($succeed)
-    //     {
-    //       //connexion!!!!!
-    //       header('location:index.php');
-    //     }
-    //   }
-    // }
+    $_POST['r_pseudo'] = filter_var($_POST["r_pseudo"], FILTER_SANITIZE_STRING);
+    $_POST['r_email'] = filter_var($_POST["r_email"], FILTER_SANITIZE_EMAIL);
+    $_POST['r_password'] = filter_var($_POST["r_password"], FILTER_SANITIZE_STRING);
+    $_POST['r_confirmpassword'] = filter_var($_POST["r_confirmpassword"], FILTER_SANITIZE_STRING);
+    $_POST['btn-register'] = filter_var($_POST["btn-register"], FILTER_SANITIZE_STRING);
 
-var_dump($_FILES);
-echo "<br/>";
+    $valid = true;
+    if(empty($_POST['r_pseudo']))$valid = false;
+    if(empty($_POST['r_email']))$valid = false;
+    if(empty($_POST['r_password']))$valid = false;
+    if(empty($_POST['r_confirmpassword']))$valid = false;
+    if(empty($_POST['btn-register']))$valid = false;
+
+    if($_POST['r_password'] != $_POST['r_confirmpassword'])$valid = false;
+
+    if($valid)
+    {
+      $bdd = ConnectMySQL();
+
+      $req = $bdd->prepare('SELECT count(*)
+                            FROM users
+                            WHERE pseudo = :pseudo
+                            || email = :email
+                          ');
+      $req->execute(array(
+              'pseudo'  => $_POST['r_pseudo'],
+              'email'   => $_POST['r_email']
+            ));
+
+      $number = $req->fetchColumn();
+
+      if($number == 0)
+      {
+        $req = $bdd->prepare('INSERT INTO users(pseudo, email, password) VALUES(:pseudo, :email, :password)');
+        $succeed = $req->execute(array(
+            'pseudo'    => $_POST['r_pseudo'],
+            'email'     => $_POST['r_email'],
+            'password'  => sha1($_POST['r_password'])
+            ));
+        if($succeed)
+        {
+          //connexion!!!!!
+          header('location:index.php');
+        }
+      }
+    }
+
     /*Chargement de l'image*/
+    /*Transforme l'image en base64*/
     if(isset($_FILES['file_image']) && $_FILES['file_image']['error'] == 0)
     {
 
@@ -180,7 +179,7 @@ echo "<br/>";
   <head>
     <meta charset="utf-8">
     <title>Inscription</title>
-    <link rel="stylesheet" href="style-register.css">
+    <link rel="stylesheet" href="css/register.css">
   </head>
   <body>
     <section>

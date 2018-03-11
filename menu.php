@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="style-menu.css">
+<link rel="stylesheet" href="css/menu.css">
 <?php
   if( $_SERVER['REQUEST_METHOD']=='POST')
   {

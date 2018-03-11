@@ -21,7 +21,7 @@ $tab = $req->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="5">
     <title>Conversation</title>
-    <link rel="stylesheet" href="style-conversation.css">
+    <link rel="stylesheet" href="css/conversation.css">
   </head>
   <body>
     <?php for($i=sizeof($tab)-1; $i >= 0 ; $i--): ?>
