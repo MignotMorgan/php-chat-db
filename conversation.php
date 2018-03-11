@@ -50,20 +50,13 @@ $tab = $req->fetchAll(PDO::FETCH_ASSOC);
        ?>
 
       <div class="div--messages  <?php echo $divClass ?>">
-        <div class=" div--avatar <?php echo $avatarClass; ?>">
-SALUT
-        </div>
+        <div class=" div--avatar <?php echo $avatarClass; ?>"></div>
         <div class="tri <?php echo $triClass; ?>"></div>
         <div class="div--bubble <?php echo $bubbleClass ?>">
-
           <label class="lbl--pseudo <?php echo $pseudoClass; ?>" for=""><?php print_r($tab[$i]['pseudo']) ?></label>
           <label class="lbl--datetime <?php echo $datetimeClass; ?>" for=""><?php print_r($tab[$i]['datetime']) ?></label>
-
           <label class="lbl--txt <?php echo $txtClass; ?>" for=""><?php print_r($tab[$i]['message']) ?></label>
-
-
         </div>
-
     </div>
     <?php endfor; ?>
   </body>

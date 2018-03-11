@@ -1,61 +1,40 @@
 body{
-  /* background-color: #3399ff; */
   background-color: white;
 }
 
+/*Encadrement du message*/
 .div--messages{
   width:60%;
   margin-bottom: 5px;
-
-  /* vertical-align: middle; */
-
-  /* padding: 10px; */
-  /* background-color:#E6E6FA; */
-  /* background-color: aqua; */
 }
 .div--left{
   display: grid;
   grid-template-columns: 50px 25px auto;
-  /* grid-template-rows: 25% 75%; */
-
   float:left;
+
   text-align: left;
-
-  /* border-radius: 0 15px 15px 0; */
-
-  background-color: green;
-
-  /* background: linear-gradient(to right, white, aqua); */
 }
 .div--right{
   display: grid;
   grid-template-columns: auto 25px 50px;
-  /* grid-template-rows: 25% 75%; */
-
   float:right;
+
   text-align: right;
-
-  /* border-radius: 15px 0 0 15px; */
-
-  background-color: green;
-  /* background: linear-gradient(to right, aqua, white); */
 }
 
+/*encadrement de l'avatar*/
 .div--avatar{
 
 }
 .div--avatar-left{
   grid-column: 1;
-  /* grid-row: 1 / 2; */
 
   background-color: pink;
 }
 .div--avatar-right{
   grid-column: 3;
-  /* grid-row: 1 / 2; */
 
   background-color: pink;
-
 }
 
 .div--bubble{
@@ -66,7 +45,6 @@ body{
   height:100%;
 
   border-radius: 20px;
-
 
   background-color: red;
 }
@@ -82,51 +60,40 @@ body{
 .lbl--pseudo{
   grid-row: 1;
 
-  /* margin: 25px; */
-  /* background-color: yellow; */
   font-weight: bold;
   text-align: center;
 }
 .lbl--pseudo-left{
   grid-column: 1;
   grid-row: 1;
-  /* grid-column: 1; */
-  /* margin-right: 20%; */
 }
 .lbl--pseudo-right{
   grid-column: 2;
   grid-row: 1;
-  /* grid-column: 2; */
-  /* margin-left: 20%; */
 }
 
 .lbl--datetime{
   grid-row: 1;
 
-  /* display: block; */
-  /* margin: 10px; */
-/* background-color: orange; */
+  padding-top: auto;
+
   font-size: 0.7em;
   font-style: italic;
 }
 .lbl--datetime-left{
   grid-column: 2;
   grid-row: 1;
-  /* grid-column: 1; */
-
 }
 .lbl--datetime-right{
   grid-column: 1;
   grid-row: 1;
-  /* grid-column: 2; */
 }
 
 .lbl--txt{
   grid-column: 1 / span 2;
   grid-row: 2;
-  /* display:block; */
+
   padding: 10px;
-  /* background-color: purple; */
 }
 .lbl--txt-left{
   text-align: right;
@@ -161,16 +128,3 @@ body{
   border-bottom: 10px solid transparent;
   border-left: 20px solid red;
 }
- /* .tri-right{ */
-	/* content: ' '; */
-	/* position: absolute; */
-	/* width: 0;
-	height: 0;
-  left: auto;
-	right: -25px; */
-  /* top: 38px; */
-	/* bottom: auto; */
-  /* bottom: 55px;
-	border: 12px solid;
-	border-color: blue transparent transparent blue;
-}  */
